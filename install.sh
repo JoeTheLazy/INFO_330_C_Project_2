@@ -6,3 +6,4 @@ sudo mkdir -p mongodb
 cp -R -n mongodb-osx-x86_64-3.2.21/ mongodb
 sudo mkdir -p /data/db
 sudo chmod -R go+w /data/db
+echo "done!! :)"
