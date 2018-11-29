@@ -1,0 +1,10 @@
+{
+  "_id" : 1
+  "status" : "ORDERED"
+  "customerID" : 1,
+  "totalCost" : 520.20,
+  "lineItemIDs" : [1],
+  "shippingAddress" : "1959 NE Pacific St, Seattle, WA 98195",
+  "billingAddress" : "1959 NE Pacific St, Seattle, WA 98195",
+  "billingInfo" : "PO 12345"
+}
