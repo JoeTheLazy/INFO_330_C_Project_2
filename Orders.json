@@ -1,6 +1,6 @@
 {
-  "_id" : 1
-  "status" : "ORDERED"
+  "_id" : 1,
+  "status" : "ORDERED",
   "customerID" : 1,
   "totalCost" : 520.20,
   "lineItemIDs" : [1],
