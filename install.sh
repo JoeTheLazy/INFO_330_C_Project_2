@@ -1,3 +1,4 @@
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install mongodb
 curl -O https://fastdl.mongodb.org/osx/mongodb-osx-x86_64-3.2.21.tgz
 tar -zxvf mongodb-osx-x86_64-3.2.21.tgz
