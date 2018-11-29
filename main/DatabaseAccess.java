@@ -1,14 +1,33 @@
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.ServerAddress;
+
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.MongoCollection;
+
+import org.bson.Document;
+import java.util.Arrays;
+import com.mongodb.Block;
+
+import com.mongodb.client.MongoCursor;
+import static com.mongodb.client.model.Filters.*;
+import com.mongodb.client.result.DeleteResult;
+import static com.mongodb.client.model.Updates.*;
+import com.mongodb.client.result.UpdateResult;
+import java.util.ArrayList;
+import java.util.List;
+
 import java.util.Date;
 
 import javax.swing.JOptionPane;
 
 public class DatabaseAccess {
-	
+
 	public static Order [] GetPendingOrders()
 	{
 		// TODO:  Query the database and retrieve the information.
 		// resultset.findcolumn(string col)
-		
+
 		// DUMMY DATA!
 		Order o = new Order();
 		o.OrderID = 1;
@@ -24,11 +43,11 @@ public class DatabaseAccess {
 		o.ShippingAddress= "1959 NE Pacific St, Seattle, WA 98195";
 		return new Order [] { o };
 	}
-	
+
 	public static Product[] GetProducts()
 	{
 		// TODO:  Retrieve all the information about the products.
-		
+
 		// DUMMY VALUES
 		Product p = new Product();
 		p.Description = "A great monitor";
@@ -41,9 +60,9 @@ public class DatabaseAccess {
 
 	public static Order GetOrderDetails(int OrderID)
 	{
-		// TODO:  Query the database to get the flight information as well as all 
+		// TODO:  Query the database to get the flight information as well as all
 		// the reservations.
-		
+
 		// DUMMY DATA FOLLOWS
 		Order o = new Order();
 		o.OrderID = 1;
@@ -65,7 +84,7 @@ public class DatabaseAccess {
 		li.Product.Description = "A great product.";
 		li.Product.Name = "Computer Mouse";
 		li.Quantity = 2;
-		
+
 		o.LineItems = new LineItem[] {li};
 		return o;
 	}
@@ -79,21 +98,21 @@ public class DatabaseAccess {
 		p.Price = 196;
 		p.ProductID = ProductID;
 		p.UserComments = new String [] { "I bought this product last year and it's still the best monitor I've had.", "After 6 months the color started going out, not sure if it was just mine or all of them" };
-		
+
 		return p;
-		
+
 	}
-	
+
 	public static Customer [] GetCustomers ()
 	{
 		// TODO:  Query the database to retrieve a list of customers.
-		
+
 		// DUMMY VALUES FOLLOW
 		Customer c1 = new Customer();
 		c1.CustomerID = 1;
 		c1.Email = "k@u";
 		c1.Name = "Kevin Fleming";
-		
+
 		Customer c2 = new Customer();
 		c2.CustomerID = 2;
 		c2.Email = "k@u";
@@ -103,10 +122,10 @@ public class DatabaseAccess {
 		c3.CustomerID = 3;
 		c3.Email = "k@u";
 		c3.Name = "Ava Fleming";
-		
+
 		return new Customer [] { c1, c2, c3 };
 	}
-	
+
 	public static Order [] GetCustomerOrders (Customer c)
 	{
 		Order o = new Order();
@@ -124,7 +143,7 @@ public class DatabaseAccess {
 
 		return new Order [] { o };
 	}
-	
+
 	public static Product [] SearchProductReviews(String query)
 	{
 		// DUMMY VALUES
@@ -137,12 +156,12 @@ public class DatabaseAccess {
 		p.Relavance = 0.7;
 		return new Product [] { p} ;
 	}
-	                    
+
 	public static void MakeOrder(Customer c, LineItem [] LineItems)
 	{
 		// TODO: Insert data into your database.
 		// Show an error message if you can not make the reservation.
-		
+
 		JOptionPane.showMessageDialog(null, "Create order for " + c.Name + " for " + Integer.toString(LineItems.length) + " items.");
 	}
 }
