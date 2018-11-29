@@ -6,13 +6,13 @@
 
 {
   "_id" : 2,
-  "email" : "n@u"
+  "email" : "n@u",
   "name" : "Niki Cassaro"
 }
 
 {
   "_id" : 3,
-  "email" : "a@u"
+  "email" : "a@u",
   "name" : "Ava Fleming"
 }
 
