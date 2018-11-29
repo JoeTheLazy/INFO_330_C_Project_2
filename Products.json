@@ -1,0 +1,10 @@
+{
+  "_id" : 1,
+  "name" : "Monitor, 19 in"
+  "description" : "A great monitor."
+  "price" : 196
+  "inStock" : 10
+  "userComments" : ["I bought this product last year and it's still the best monitor I've had.", 
+                    "After 6 months the color started going out, not sure if it was just mine or all of them"]
+  "relevance" : 0.7
+}
